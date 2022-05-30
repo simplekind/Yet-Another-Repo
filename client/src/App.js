@@ -5,8 +5,7 @@ import { StreamChat } from "stream-chat";
 import { Chat } from "stream-chat-react";
 import Cookies from "universal-cookie";
 import { useState } from "react";
-import JoinGame from "./components/JoinGame";
-import environment_variables from "../../server/src/environment_variables"
+import environment_variables from "./components/environment_variables"
 
 function App() {
   const api_key = environment_variables.api_key;
@@ -43,12 +42,11 @@ function App() {
         setIsAuth(true);
       });
   }
-  
+
   return (
     <div className="App">
       {isAuth ? (
         <Chat client={client}>
-          <JoinGame />
           <button onClick={logOut}> Log Out</button>
         </Chat>
       ) : (
