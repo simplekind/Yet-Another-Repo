@@ -5,10 +5,10 @@ import { StreamChat } from "stream-chat";
 import { v4 as uuidv4 } from "uuid";
 import bcrypt from "bcrypt";
 // IMPORT Environment Variables
-import environment_variables from './environment_variables';
+import environment_variables from './environment_variables.js';
 
-api_key = environment_variables.api_key;
-api_secret = environment_variables.api_secret;
+const api_key = environment_variables.api_key;
+const api_secret = environment_variables.api_secret;
 
 const app = express();
 
